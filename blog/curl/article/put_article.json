@@ -1,0 +1,26 @@
+{
+  "data": {
+    "id": "2",
+    "type": "article",
+    "attributes": {
+      "title": "Cooking is Definitely 1Dope",
+      "text": "I like to cook sometimes. The end."
+    },
+    "relationships": {
+      "comments": {
+        "data": [
+          {
+            "id": "5",
+            "type": "comment"
+          }
+        ],
+        "links": {
+          "related": "http://localhost:3000/api/articles/2/comments"
+        }
+      }
+    },
+    "links": {
+      "self": "http://localhost:3000/api/articles/2"
+    }
+  }
+}
