@@ -1,26 +1,26 @@
 {
   "data": {
-    "id": "2",
+    "id": "fcc6432e-1fb1-4f7a-af44-1cc78299cf53",
     "type": "article",
     "attributes": {
-      "title": "Cooking is Definitely 1Dope",
+      "title": "Cooking is Kinda Dope",
       "text": "I like to cook sometimes. The end."
     },
     "relationships": {
       "comments": {
         "data": [
           {
-            "id": "5",
+            "id": "5fe4a1ba-4c0f-4bd0-b0fb-ea80ec0ea5ca",
             "type": "comment"
           }
         ],
         "links": {
-          "related": "http://localhost:3000/api/articles/2/comments"
+          "related": "http://localhost:3000/api/articles/fcc6432e-1fb1-4f7a-af44-1cc78299cf53/comments"
         }
       }
     },
     "links": {
-      "self": "http://localhost:3000/api/articles/2"
+      "self": "http://localhost:3000/api/articles/fcc6432e-1fb1-4f7a-af44-1cc78299cf53"
     }
   }
 }

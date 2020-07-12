@@ -6,10 +6,55 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-officeArticle = Article.create({text: "1: Buy a dope desk. 2: Buy a dope computer. 3: Plug in the computer. 4: Enjoy!", title: "How to Setup a Dope Home Office"})
-officeArticle.comments.create({text: "Dope article dude!", likes: 0})
-officeArticle.comments.create({text: "Thanks for the tips - can't wait to do this!", likes: 3})
-officeArticle.comments.create({text: "Step #1 blows my mind.", likes: 1000})
-officeArticle.comments.create({text: "YESSSS", likes: 23})
-cookingArticle = Article.create({text: "I like to cook sometimes. The end.", title: "Cooking is Kinda Dope"})
-cookingArticle.comments.create({text: "Cooking blows", likes: 33})
+office_article = Article
+  .create({
+    id: SecureRandom.uuid,
+    text: "1: Buy a dope desk. 2: Buy a dope computer. 3: Plug in the computer. 4: Enjoy!",
+    title: "How to Setup a Dope Home Office"
+  })
+office_article
+  .comments
+  .create({
+    id: SecureRandom.uuid,
+    text: "Dope article dude!",
+    likes: 0,
+    article_id: office_article.id
+  })
+office_article
+  .comments
+  .create({
+    id: SecureRandom.uuid,
+    text: "Thanks for the tips - can't wait to do this!",
+    likes: 3,
+    article_id: office_article.id
+  })
+office_article
+  .comments
+  .create({
+    id: SecureRandom.uuid,
+    text: "Step #1 blows my mind.",
+    likes: 1000,
+    article_id: office_article.id
+  })
+office_article
+  .comments
+  .create({
+    id: SecureRandom.uuid,
+    text: "YESSSS",
+    likes: 23,
+    article_id: office_article.id
+  })
+cooking_article = Article
+  .create({
+    id: SecureRandom.uuid,
+    text: "I like to cook sometimes. The end.",
+    title: "Cooking is Kinda Dope"
+  })
+cooking_article
+  .comments
+  .create({
+    id: SecureRandom.uuid,
+    text: "Cooking blows",
+    likes: 33,
+    article_id: cooking_article.id
+  })

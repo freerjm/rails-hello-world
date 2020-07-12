@@ -18,6 +18,7 @@ class Api::ArticlesController < ApplicationController
   # POST /articles/
   def create
     p = creation_params
+    p[:id] = SecureRandom.uuid
     article = Article.new(p)
     if article.save
       render json: ArticleSerializer.new(article).serializable_hash
